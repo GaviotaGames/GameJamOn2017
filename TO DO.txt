@@ -1,0 +1,6 @@
+-controles que modifiquen "amplitud" y "longitud" a la vez en "curva" y "personaje"
+-instanciar peligros (aleatorio? por sectores?)
+-acceder al reloj, y cambio de colores en tiempo real
+-menu
+-modos de juego
+-puntuacion
