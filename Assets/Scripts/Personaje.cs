@@ -11,12 +11,22 @@ public class Personaje : MonoBehaviour {
   public float amplitudeChangePerSecond = 0.007f;
   public float longitudeChangePerSecond = 0.2f;
   public float threshold = 0.2f;
+    
+	public Curva follow = null;
 
-  private float posY = 0f;
+	void FixedUpdate () {
+		if (follow != null) {
+			this.amplitude = follow.amplitude;
+		}
+	}
 
-  void Update () {
-    controls();
-    movement();
+	void Update () {
+		movement();
+	}
+
+	private void movement() {
+		posY = (Mathf.Sin (Time.time * longitude + transform.position.x * longitude)) * amplitude;
+		transform.position = new Vector3 (transform.position.x, posY, transform.position.z);
 	}
 
   private void movement() {
