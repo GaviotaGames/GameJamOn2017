@@ -30,8 +30,8 @@ public class Curva : MonoBehaviour {
 
   void FixedUpdate () {
     if (follow != null) {
-      this.amplitud = follow.amplitude;
-      this.longitud = follow.longitude;
+      this.amplitude = follow.amplitude;
+      this.longitude = follow.longitude;
     }
   }
 
