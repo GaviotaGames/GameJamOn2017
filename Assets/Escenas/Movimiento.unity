@@ -199,7 +199,7 @@ Prefab:
     - target: {fileID: 114648770800927728, guid: 89193dcfa2193f54194aea40c348758c,
         type: 2}
       propertyPath: hazardArray.Array.size
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4747646664221012, guid: 89193dcfa2193f54194aea40c348758c, type: 2}
       propertyPath: m_LocalPosition.x
@@ -249,23 +249,26 @@ Prefab:
         type: 2}
       propertyPath: hazardArray.Array.data[4]
       value: 
-      objectReference: {fileID: 1451741697519892, guid: 7b66a06d384ca5743abc08b80abb16cc,
+      objectReference: {fileID: 1695580271673594, guid: 7b66a06d384ca5743abc08b80abb16cc,
         type: 2}
     - target: {fileID: 114648770800927728, guid: 89193dcfa2193f54194aea40c348758c,
         type: 2}
       propertyPath: hazardArray.Array.data[5]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1959585197520180, guid: adbe5b698e94e1747ba0e269c1a17f5b,
+        type: 2}
     - target: {fileID: 114648770800927728, guid: 89193dcfa2193f54194aea40c348758c,
         type: 2}
       propertyPath: hazardArray.Array.data[6]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1810088702844844, guid: 93550d7da6c87f4448862f7dc4a501a6,
+        type: 2}
     - target: {fileID: 114648770800927728, guid: 89193dcfa2193f54194aea40c348758c,
         type: 2}
       propertyPath: hazardArray.Array.data[7]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1637687109051330, guid: 5c4220dc99d0eac4e87f2402db67d2fc,
+        type: 2}
     - target: {fileID: 114648770800927728, guid: 89193dcfa2193f54194aea40c348758c,
         type: 2}
       propertyPath: hazardArray.Array.data[0]
@@ -391,7 +394,19 @@ MonoBehaviour:
     backgroundUp: {r: 0.44162393, g: 0.10899653, b: 0.9264706, a: 0}
     line: {r: 0.9705882, g: 0, b: 0, a: 0}
     platform: {r: 0, g: 0, b: 0, a: 0}
-  nightPalettes: []
+  nightPalettes:
+  - backgroundDown: {r: 0.5441177, g: 0, b: 0, a: 0}
+    backgroundUp: {r: 0.71323526, g: 0.555904, b: 0.555904, a: 0}
+    line: {r: 0.255731, g: 0.63235295, b: 0.5855999, a: 0}
+    platform: {r: 0.7074909, g: 0.21004543, b: 0.8161765, a: 0}
+  - backgroundDown: {r: 0.05693123, g: 0.5611108, b: 0.8602941, a: 0}
+    backgroundUp: {r: 0.6102941, g: 0.017949844, b: 0.017949844, a: 0}
+    line: {r: 0.3241377, g: 0, b: 1, a: 0}
+    platform: {r: 0, g: 1, b: 0.5862069, a: 0}
+  - backgroundDown: {r: 0.64705884, g: 0.099913515, b: 0.31499833, a: 0}
+    backgroundUp: {r: 0.5514706, g: 0, b: 0, a: 0}
+    line: {r: 1, g: 1, b: 1, a: 0}
+    platform: {r: 0.06866351, g: 0.79062456, b: 0.9338235, a: 0}
   bossDayPalettes: []
   bossNightPalettes: []
   currentPalette:
@@ -586,6 +601,11 @@ Prefab:
     - target: {fileID: 4312900129225760, guid: 3bf4a3cf7c5ee7141a1098edf0fd5eb7, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 20263444425189878, guid: 3bf4a3cf7c5ee7141a1098edf0fd5eb7,
+        type: 2}
+      propertyPath: orthographic size
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3bf4a3cf7c5ee7141a1098edf0fd5eb7, type: 2}

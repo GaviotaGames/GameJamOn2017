@@ -33,8 +33,6 @@ public class GameController : MonoBehaviour
 			{
 				numero = Random.Range (0, hazardArray.Length);
 
-				//Debug.Log ("numero: " + numero);
-
 				hazard = hazardArray [numero];
 
 				Vector3 spawnPosition = new Vector3 (spawnValues.x, spawnValues.y, spawnValues.z);
