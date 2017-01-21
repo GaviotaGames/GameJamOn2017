@@ -29,7 +29,7 @@ public class Curva : MonoBehaviour {
 	void Update () {
 		for (int i = 0; i < lineRend.numPositions; i++) {
 			posX = transform.position.x + separacion * i;
-			posY = (Mathf.Sin(Time.time * longitud + posX * longitud)) * amplitud;
+			posY = (Mathf.Sin(Time.time + posX * longitud)) * amplitud;
 			lineRend.SetPosition (i, new Vector3 (posX, posY, transform.position.z));
 		}
 	}
