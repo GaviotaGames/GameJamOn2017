@@ -42,7 +42,7 @@ public class Curva : MonoBehaviour {
 	private void controls() {
 		if (!mantener) {
 			if (Mathf.Abs (Input.GetAxis ("Horizontal")) > threshold) {
-				longitude = Mathf.Lerp (longitude, longitude + Mathf.Sign (Input.GetAxis ("Horizontal")), longitudeChangePerSecond * Time.deltaTime);
+				longitude = Mathf.Lerp (longitude, longitude - Mathf.Sign (Input.GetAxis ("Horizontal")), longitudeChangePerSecond * Time.deltaTime);
 				if (longitude <= longitudeMin) {
 					longitude = longitudeMin;
 				} else if (longitude >= longitudeMax) {
@@ -59,16 +59,16 @@ public class Curva : MonoBehaviour {
 				}
 			}
 		} else {
-			if (Input.GetKey (KeyCode.LeftArrow)) {
+			if (Input.GetAxis("Horizontal") > threshold) {
 				longitude = Mathf.Lerp (longitude, longitudeMin, longitudeChangePerSecond * Time.deltaTime);
 			} else {
-				longitude = Mathf.Lerp (longitude, 3f, longitudeChangePerSecond * Time.deltaTime);
+				longitude = Mathf.Lerp (longitude, longitudeMax, longitudeChangePerSecond * Time.deltaTime);
 			}
 
-			if (Input.GetKey (KeyCode.UpArrow)) {
-				amplitude = Mathf.Lerp (amplitude, 2f, amplitudeChangePerSecond * Time.deltaTime);
+			if (Input.GetAxis("Vertical") > threshold) {
+				amplitude = Mathf.Lerp (amplitude, amplitudeMin, amplitudeChangePerSecond * Time.deltaTime);
 			} else {
-				amplitude = Mathf.Lerp (amplitude, 0.2f, amplitudeChangePerSecond * Time.deltaTime);
+				amplitude = Mathf.Lerp (amplitude, amplitudeMax, amplitudeChangePerSecond * Time.deltaTime);
 			}
 		}
 	}
