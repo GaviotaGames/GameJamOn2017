@@ -12,6 +12,12 @@ public class GameController : MonoBehaviour
 	public float waveWait;
 	public float aleatoriedad = 0f;
 
+	public GameObject[] hazardArray;
+
+	public int numSelectors = 5;
+
+	int numero = 0;
+
 	void Start ()
 	{
 		StartCoroutine(SpawnWaves ());
@@ -25,7 +31,13 @@ public class GameController : MonoBehaviour
 		{
 			for (int i = 0; i < hazardCount; i++)
 			{
-				Vector3 spawnPosition = new Vector3 (spawnValues.x, Random.Range (-spawnValues.y, spawnValues.y) * aleatoriedad, spawnValues.z);
+				numero = Random.Range (0, hazardArray.Length);
+
+				Debug.Log ("numero: " + numero);
+
+				hazard = hazardArray [numero];
+
+				Vector3 spawnPosition = new Vector3 (spawnValues.x, spawnValues.y, spawnValues.z);
 				Quaternion spawnRotation = new Quaternion ();
 				Instantiate (hazard, spawnPosition, spawnRotation);
 				yield return new WaitForSeconds (spawnWait);
@@ -34,4 +46,5 @@ public class GameController : MonoBehaviour
 			yield return new WaitForSeconds (spawnWait);
 		}
 	}
+
 }

@@ -26,7 +26,7 @@ GameObject:
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4747646664221012
 Transform:
   m_ObjectHideFlags: 1
@@ -51,10 +51,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d9daedf4034f334498fb8633249d0a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hazard: {fileID: 1042081337904656, guid: 46b2ef7b81a31f54dbb7eb0c61317d26, type: 2}
-  spawnValues: {x: 9, y: 1, z: 0}
+  hazard: {fileID: 1143215125897676, guid: b7dfa3cb9e7f5ca46a308beca2cb78f7, type: 2}
+  spawnValues: {x: 9, y: 0, z: 0}
   hazardCount: 5
   spawnWait: 2
   startWait: 2
   waveWait: 0
   aleatoriedad: 0
+  hazardArray:
+  - {fileID: 1143215125897676, guid: b7dfa3cb9e7f5ca46a308beca2cb78f7, type: 2}
+  - {fileID: 1794926249893796, guid: 111e22e85b78d4340872b58868d04e64, type: 2}
+  numSelectors: 5
