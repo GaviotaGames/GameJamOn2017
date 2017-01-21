@@ -7,9 +7,8 @@ public class Mover : MonoBehaviour
 	private Rigidbody rb;
 	public float speed;
 
-	void Start ()
+	void Update ()
 	{
-		rb = GetComponent<Rigidbody>();
-		rb.velocity = transform.right * (-speed);
+		transform.position += Vector3.right * (-speed * 0.01f);
 	}
 }

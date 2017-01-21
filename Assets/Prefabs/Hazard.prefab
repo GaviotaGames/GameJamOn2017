@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23312603787072044}
   - component: {fileID: 33678323770443680}
   - component: {fileID: 114738329360878806}
-  - component: {fileID: 114211497414514294}
+  - component: {fileID: 114929184881733322}
   m_Layer: 0
   m_Name: Hazard
   m_TagString: Untagged
@@ -98,17 +98,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114211497414514294
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1143215125897676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c42742054310e1c42ae01ff215e05f64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114738329360878806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,6 +110,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!114 &114929184881733322
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1143215125897676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a2d8d4dee6d86e43b7afe89e3f04c19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &136668865316683746
 CapsuleCollider:
   m_ObjectHideFlags: 1
