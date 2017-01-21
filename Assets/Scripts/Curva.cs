@@ -4,27 +4,53 @@ using UnityEngine;
 
 public class Curva : MonoBehaviour {
 
-	public float amplitud = 1f;
-	public float longitud = 1f;
+	public float amplitude = 1f;
+	public float longitude = 1f;
 	public float separacion = 1f;
 
 	private float posX = 0f;
 	private float posY = 0f;
 	private LineRenderer lineRend = null;
 
+	public float amplitudeChangePerSecond = 0.007f;
+	public float longitudeChangePerSecond = 0.2f;
+	public float threshold = 0.2f;
+
+	public float amplitudeMax = 1f;
+	public float amplitudeMin = 1f;
+	public float longitudeMax = 5f;
+	public float longitudeMin = 0f;
+
 	void Start (){
 		lineRend = GetComponent <LineRenderer>();
 	}
 
 	void Update () {
-		
+		controls ();
+
 		for (int i = 0; i < lineRend.numPositions; i++) {
 			posX = transform.position.x + separacion * i;
-			posY = (Mathf.Sin(Time.time * longitud + posX * longitud)) * amplitud;
+			posY = (Mathf.Sin(Time.time + posX * longitude)) * amplitude;
 			lineRend.SetPosition (i, new Vector3 (posX, posY, transform.position.z));
 		}
+	}
 
-		//posY = (Mathf.Sin(Time.time + transform.position.x * longitud)) * amplitud;
-		//transform.position = new Vector3 (transform.position.x, posY, transform.position.z);
+	private void controls() {
+		if (Mathf.Abs (Input.GetAxis ("Horizontal")) > threshold) {
+			longitude = Mathf.Lerp (longitude, longitude + Mathf.Sign (Input.GetAxis ("Horizontal")), longitudeChangePerSecond * Time.deltaTime);
+			if (longitude <= longitudeMin) {
+				longitude = longitudeMin;
+			} else if (longitude >= longitudeMax) {
+				longitude = longitudeMax;
+			}
+		}
+		if (Mathf.Abs (Input.GetAxis ("Vertical")) > threshold) {
+				amplitude = Mathf.Lerp (amplitude, amplitude + Mathf.Sign (Input.GetAxis ("Vertical")), amplitudeChangePerSecond * Time.deltaTime);
+			if (amplitude <= amplitudeMin) {
+				amplitude = amplitudeMin;
+			} else if (amplitude >= amplitudeMax) {
+				amplitude = amplitudeMax;
+			}
+		}
 	}
 }
