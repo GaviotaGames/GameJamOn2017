@@ -32,7 +32,7 @@ public class LevelPalettes : MonoBehaviour {
 
   void Update() {
     float transitionStep = (Time.time - paletteChangeTriggered) / (paletteChangeToFinish - paletteChangeTriggered);
-    currentPalette = LevelPalettes.paletteLerp(currentPalette, currentPaletteUnlerped, 0.5f*Time.deltaTime);
+    currentPalette = LevelPalettes.paletteLerp(currentPalette, currentPaletteUnlerped, transitionStep);
   }
 
   public void paletteSwap() {
