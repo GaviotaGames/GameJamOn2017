@@ -15,6 +15,7 @@ public class LevelPalettes : MonoBehaviour {
   public Palette[] bossNightPalettes;
   public Palette currentPalette;
   public Palette currentPaletteUnlerped;
+  public Palette originPalette;
 
   // Singleton
   private static LevelPalettes _instance;
@@ -32,10 +33,12 @@ public class LevelPalettes : MonoBehaviour {
 
   void Update() {
     float transitionStep = (Time.time - paletteChangeTriggered) / (paletteChangeToFinish - paletteChangeTriggered);
-    currentPalette = LevelPalettes.paletteLerp(currentPalette, currentPaletteUnlerped, transitionStep);
+    Debug.Log(transitionStep);
+    currentPalette = LevelPalettes.paletteLerp(originPalette, currentPaletteUnlerped, transitionStep);
   }
 
   public void paletteSwap() {
+    originPalette = currentPalette;
     currentPaletteUnlerped = LevelPalettes.randomNextPalette(currentPaletteUnlerped, this.getCurrentPalettes());
     paletteChangeTriggered = Time.time;
     paletteChangeToFinish = paletteChangeTriggered + nextPaletteIntervalInSeconds;
