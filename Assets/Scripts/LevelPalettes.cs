@@ -33,7 +33,6 @@ public class LevelPalettes : MonoBehaviour {
 
   void Update() {
     float transitionStep = (Time.time - paletteChangeTriggered) / (paletteChangeToFinish - paletteChangeTriggered);
-    Debug.Log(transitionStep);
     currentPalette = LevelPalettes.paletteLerp(originPalette, currentPaletteUnlerped, transitionStep);
   }
 
