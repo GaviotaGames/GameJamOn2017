@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4629249234774506}
   - component: {fileID: 54543838182365152}
-  - component: {fileID: 136787125872426380}
   - component: {fileID: 114261813821331608}
   - component: {fileID: 114609790544193030}
+  - component: {fileID: 65682039681743826}
   m_Layer: 0
   m_Name: H_6
   m_TagString: Untagged
@@ -67,8 +67,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1747174153038446}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.18, y: -0.9406116, z: 0.744225}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 2, y: 0, z: 0}
+  m_LocalScale: {x: 0.28, y: 0.28, z: 0.28}
   m_Children:
   - {fileID: 4313893843301238}
   m_Father: {fileID: 0}
@@ -127,6 +127,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65682039681743826
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1747174153038446}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.62, y: 1.3, z: 1}
+  m_Center: {x: -1.5, y: 0, z: 0}
 --- !u!114 &114261813821331608
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -150,16 +162,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42742054310e1c42ae01ff215e05f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!136 &136787125872426380
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1747174153038446}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
