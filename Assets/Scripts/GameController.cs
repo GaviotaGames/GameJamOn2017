@@ -33,13 +33,14 @@ public class GameController : MonoBehaviour
 			{
 				numero = Random.Range (0, hazardArray.Length);
 
-				Debug.Log ("numero: " + numero);
+				//Debug.Log ("numero: " + numero);
 
 				hazard = hazardArray [numero];
 
 				Vector3 spawnPosition = new Vector3 (spawnValues.x, spawnValues.y, spawnValues.z);
 				Quaternion spawnRotation = new Quaternion ();
-				Instantiate (hazard, spawnPosition, spawnRotation);
+				GameObject newHazard = Instantiate (hazard, spawnPosition, spawnRotation);
+        newHazard.AddComponent(typeof(HazardPaletteManager));
 				yield return new WaitForSeconds (spawnWait);
 			}
 
