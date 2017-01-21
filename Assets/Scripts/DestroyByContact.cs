@@ -4,14 +4,11 @@ using UnityEngine;
 
 public class DestroyByContact : MonoBehaviour
 {
-	void OnTriggerEnter(Collider other)
-	{
-		if (other.tag == "Boundary")
-		{
-			return;
-		}
+	void OnTriggerEnter(Collider other) {
+    ExtraLives collided = other.GetComponent<ExtraLives>();
 
-		Destroy(other.gameObject);
-		//Destroy(gameObject);
-	}
+    if (collided != null) {
+      collided.takeALife();
+    }
+  }
 }
