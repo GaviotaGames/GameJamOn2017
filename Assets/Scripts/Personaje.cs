@@ -11,6 +11,8 @@ public class Personaje : MonoBehaviour {
   public float amplitudeChangePerSecond = 0.007f;
   public float longitudeChangePerSecond = 0.2f;
   public float threshold = 0.2f;
+
+  private float posY = 0f;
     
 	public Curva follow = null;
 
@@ -28,11 +30,6 @@ public class Personaje : MonoBehaviour {
 		posY = (Mathf.Sin (Time.time * longitude + transform.position.x * longitude)) * amplitude;
 		transform.position = new Vector3 (transform.position.x, posY, transform.position.z);
 	}
-
-  private void movement() {
-    posY = (Mathf.Sin(Time.time * longitude + transform.position.x * longitude)) * amplitude;
-    transform.position = new Vector3(transform.position.x, posY, transform.position.z);
-  }
 
   private void controls() {
     if (Mathf.Abs(Input.GetAxis("Horizontal")) > threshold) {
