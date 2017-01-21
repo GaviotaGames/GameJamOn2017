@@ -199,7 +199,7 @@ Prefab:
     - target: {fileID: 114648770800927728, guid: 89193dcfa2193f54194aea40c348758c,
         type: 2}
       propertyPath: hazardArray.Array.size
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4747646664221012, guid: 89193dcfa2193f54194aea40c348758c, type: 2}
       propertyPath: m_LocalPosition.x
@@ -255,20 +255,17 @@ Prefab:
         type: 2}
       propertyPath: hazardArray.Array.data[5]
       value: 
-      objectReference: {fileID: 1375115585204476, guid: adbe5b698e94e1747ba0e269c1a17f5b,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 114648770800927728, guid: 89193dcfa2193f54194aea40c348758c,
         type: 2}
       propertyPath: hazardArray.Array.data[6]
       value: 
-      objectReference: {fileID: 1670858523771502, guid: f9a233578b21ccd4dbb6cfde05abd6e0,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 114648770800927728, guid: 89193dcfa2193f54194aea40c348758c,
         type: 2}
       propertyPath: hazardArray.Array.data[7]
       value: 
-      objectReference: {fileID: 1996380162955682, guid: e59c997d7960b3c43977881e977f360b,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 114648770800927728, guid: 89193dcfa2193f54194aea40c348758c,
         type: 2}
       propertyPath: hazardArray.Array.data[0]
@@ -372,7 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64a1515be8afc914dab479645ab57cf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swapPalettesEverySeconds: 5
+  swapPalettesEverySeconds: 10
 --- !u!114 &616874958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,7 +381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f503eb5a33a7d428d114abcc75da97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextPaletteIntervalInSeconds: 2
+  nextPaletteIntervalInSeconds: 10
   dayPalettes:
   - backgroundDown: {r: 1, g: 0, b: 0, a: 0}
     backgroundUp: {r: 0.53676474, g: 0, b: 0, a: 0}
@@ -403,6 +400,11 @@ MonoBehaviour:
     line: {r: 0, g: 0, b: 0, a: 0}
     platform: {r: 0, g: 0, b: 0, a: 0}
   currentPaletteUnlerped:
+    backgroundDown: {r: 0, g: 0, b: 0, a: 0}
+    backgroundUp: {r: 0, g: 0, b: 0, a: 0}
+    line: {r: 0, g: 0, b: 0, a: 0}
+    platform: {r: 0, g: 0, b: 0, a: 0}
+  originPalette:
     backgroundDown: {r: 0, g: 0, b: 0, a: 0}
     backgroundUp: {r: 0, g: 0, b: 0, a: 0}
     line: {r: 0, g: 0, b: 0, a: 0}
@@ -467,7 +469,7 @@ Prefab:
     - target: {fileID: 114476598104776270, guid: 6e3fdefbb6c20284a9c1f9c53603a055,
         type: 2}
       propertyPath: amplitudeMin
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6e3fdefbb6c20284a9c1f9c53603a055, type: 2}
