@@ -22,17 +22,15 @@ public class ScorePersistente : MonoBehaviour {
 			Instance = this;
 			//Le decimos a unity que no destruya el objeto entre escenas
 			DontDestroyOnLoad(gameObject);
-
 		}
-
 	}
 
 	//Pedimos el Score que le queda al personaje
-	public int getPlayerScore(){
+	public int getPlayerScore () {
 		return Score;
 	}
 	//Modificamos el Score que le queda al personaje
-	public void setPlayerScore(int newScore){
+	public void setPlayerScore (int newScore) {
 		Score = newScore;
 	} 
 }
