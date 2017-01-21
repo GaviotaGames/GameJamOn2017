@@ -8,6 +8,9 @@ public class Curva : MonoBehaviour {
 	public float longitude = 1f;
 	public float separacion = 1f;
 
+  // El objeto al que seguir con amplitud y longitud
+  public Personaje follow = null;
+
 	private float posX = 0f;
 	private float posY = 0f;
 	private LineRenderer lineRend = null;
@@ -24,6 +27,13 @@ public class Curva : MonoBehaviour {
 	void Start (){
 		lineRend = GetComponent <LineRenderer>();
 	}
+
+  void FixedUpdate () {
+    if (follow != null) {
+      this.amplitud = follow.amplitude;
+      this.longitud = follow.longitude;
+    }
+  }
 
 	void Update () {
 		controls ();
