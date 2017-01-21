@@ -8,7 +8,7 @@ public class ScorePersistente : MonoBehaviour {
 	//Podemos coger la referencia pero no modificarla
 	public static ScorePersistente Instance{ get; private set;}
 	//El score que tiene el personaje
-	int Score = 0;
+	float Score = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -28,11 +28,11 @@ public class ScorePersistente : MonoBehaviour {
 	}
 
 	//Pedimos el Score que le queda al personaje
-	public int getPlayerScore(){
+	public float getPlayerScore(){
 		return Score;
 	}
 	//Modificamos el Score que le queda al personaje
-	public void setPlayerScore(int newScore){
+	public void setPlayerScore(float newScore){
 		Score = newScore;
 	} 
 }
