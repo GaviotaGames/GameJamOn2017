@@ -47,7 +47,7 @@ public class Curva : MonoBehaviour {
 
 	private void controls() {
 		if (Mathf.Abs (Input.GetAxis ("Horizontal")) > threshold) {
-			longitude = Mathf.Lerp (longitude, longitude + Mathf.Sign (Input.GetAxis ("Horizontal")), longitudeChangePerSecond * Time.deltaTime);
+			longitude = Mathf.Lerp (longitude, longitude - Mathf.Sign (Input.GetAxis ("Horizontal")), longitudeChangePerSecond * Time.deltaTime);
 			if (longitude <= longitudeMin) {
 				longitude = longitudeMin;
 			} else if (longitude >= longitudeMax) {
