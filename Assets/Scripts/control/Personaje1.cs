@@ -33,7 +33,7 @@ public class Personaje1 : MonoBehaviour {
 	}
 
 	private void movement() {
-		dodge = Mathf.Lerp(7f, 7f-dodgeMax, Mathf.Clamp01(Input.GetAxis ("Horizontal2") * -1f));
+		dodge = Mathf.Lerp(7f, 7f-dodgeMax, Mathf.Clamp01(Input.GetAxis ("Horizontal2")));
 		posY = (Mathf.Sin (finalSpeed*Time.time + (transform.position.x + offset) * longitude)) * amplitude;
 		transform.position = new Vector3 (dodge, posY, transform.position.z);
 	}
