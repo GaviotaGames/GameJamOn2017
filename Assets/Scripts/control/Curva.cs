@@ -19,7 +19,8 @@ public class Curva : MonoBehaviour {
 	public float longitudeMaxMantener = 3f;
 	public float longitudeMinMantener = 0.2f;
 	public float speed = 1f;
-	public bool mantener = false;
+	public bool mantenerX = false;
+	public bool mantenerY = false;
 	public float offset = 0f;
 	public GameObject balaA = null;
 	private float dodge = 0f;
@@ -51,7 +52,8 @@ public class Curva : MonoBehaviour {
 	}
 
 	private void shoot() {
-		if (Input.GetKeyDown (KeyCode.F)){
+		//if (Input.GetKeyDown (KeyCode.F)){
+		if (Input.GetButtonDown ("Fire1")){
 			if (bulletCount < bulletMax) {
 				float posYInst = (Mathf.Sin (finalSpeed * Time.time + (0) * longitude)) * amplitude;
 				dodge = Mathf.Lerp (0f, dodgeMax, Input.GetAxis ("Horizontal"));
@@ -62,7 +64,7 @@ public class Curva : MonoBehaviour {
 	}
 
 	private void controls() {
-		if (!mantener) {
+		if (!mantenerX) {
 			if (Mathf.Abs (Input.GetAxis ("Horizontal")) > threshold) {
 				longitude = Mathf.Lerp (longitude, longitude - Mathf.Sign (Input.GetAxis ("Horizontal")), longitudeChangePerSecond * Time.deltaTime);
 				if (longitude <= longitudeMin) {
@@ -71,7 +73,15 @@ public class Curva : MonoBehaviour {
 					longitude = longitudeMax;
 				}
 			}
+		} else {
+			if (Input.GetAxis("Horizontal") > threshold) {
+					longitude = Mathf.Lerp (longitude, longitudeMinMantener, longitudeChangePerSecond * Time.deltaTime);
+			} else {
+				longitude = Mathf.Lerp (longitude, longitudeMaxMantener, longitudeChangePerSecond * Time.deltaTime);
+			}
+		}
 
+		if (!mantenerY) {
 			if (Mathf.Abs (Input.GetAxis ("Vertical")) > threshold) {
 				amplitude = Mathf.Lerp (amplitude, amplitude + Mathf.Sign (Input.GetAxis ("Vertical")), amplitudeChangePerSecond * Time.deltaTime);
 				if (amplitude <= amplitudeMin) {
@@ -81,16 +91,11 @@ public class Curva : MonoBehaviour {
 				}
 			}
 		} else {
-			if (Input.GetAxis("Horizontal") > threshold) {
-					longitude = Mathf.Lerp (longitude, longitudeMinMantener, longitudeChangePerSecond * Time.deltaTime);
-			} else {
-				longitude = Mathf.Lerp (longitude, longitudeMaxMantener, longitudeChangePerSecond * Time.deltaTime);
-			}
 
 			if (Input.GetAxis("Vertical") > threshold) {
-					amplitude = Mathf.Lerp (amplitude, amplitudeMaxMantener, amplitudeChangePerSecond * Time.deltaTime);
+				amplitude = Mathf.Lerp (amplitude, amplitudeMaxMantener, amplitudeChangePerSecond * Time.deltaTime);
 			} else {
-					amplitude = Mathf.Lerp (amplitude, amplitudeMinMantener, amplitudeChangePerSecond * Time.deltaTime);
+				amplitude = Mathf.Lerp (amplitude, amplitudeMinMantener, amplitudeChangePerSecond * Time.deltaTime);
 			}
 		}
 	}

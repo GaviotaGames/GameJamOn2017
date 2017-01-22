@@ -13,8 +13,8 @@ public class Personaje : MonoBehaviour {
 	private float finalSpeed = 1f;
 	private float posY = 0f;
 	private float dodge = 0f;
-  public float offsetVidas = 0f;
 	public float dodgeMax = 1.3f;
+	public float offsetVidas = 0f;
 
 	void FixedUpdate () {
 		if (follow != null) {

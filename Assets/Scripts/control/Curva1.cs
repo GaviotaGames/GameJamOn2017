@@ -19,7 +19,8 @@ public class Curva1 : MonoBehaviour {
 	public float longitudeMaxMantener = 3f;
 	public float longitudeMinMantener = 0.2f;
 	public float speed = 1f;
-	public bool mantener = false;
+	public bool mantenerX = false;
+	public bool mantenerY = false;
 	public float offset = 7f;
 	public GameObject balaB = null;
 	private float dodge = 0f;
@@ -50,7 +51,8 @@ public class Curva1 : MonoBehaviour {
 	}
 
 	private void shoot() {
-		if (Input.GetKeyDown (KeyCode.RightControl)){
+		//if (Input.GetKeyDown (KeyCode.RightControl)){
+		if (Input.GetButtonDown ("Fire2")){
 			if (bulletCount < bulletMax) {
 				float posYInst = (Mathf.Sin(finalSpeed*Time.time + (7) * longitude)) * amplitude;
 				dodge = Mathf.Lerp(7f, 7f-dodgeMax, Mathf.Clamp01(Input.GetAxis ("Horizontal2") * -1f));
@@ -61,7 +63,7 @@ public class Curva1 : MonoBehaviour {
 	}
 
 	private void controls() {
-		if (!mantener) {
+		if (!mantenerX) {
 			if (Mathf.Abs (Input.GetAxis ("Horizontal2")) > threshold) {
 				longitude = Mathf.Lerp (longitude, longitude + Mathf.Sign (Input.GetAxis ("Horizontal2")), longitudeChangePerSecond * Time.deltaTime);
 				if (longitude <= longitudeMin) {
@@ -70,7 +72,16 @@ public class Curva1 : MonoBehaviour {
 					longitude = longitudeMax;
 				}
 			}
+		} else {
+			if (Input.GetAxis("Horizontal2") > threshold) {
+				longitude = Mathf.Lerp (longitude, longitudeMinMantener, longitudeChangePerSecond * Time.deltaTime);
+			} else {
+				longitude = Mathf.Lerp (longitude, longitudeMaxMantener, longitudeChangePerSecond * Time.deltaTime);
+			}
+		}
 
+
+		if (!mantenerY) {
 			if (Mathf.Abs (Input.GetAxis ("Vertical2")) > threshold) {
 				amplitude = Mathf.Lerp (amplitude, amplitude + Mathf.Sign (Input.GetAxis ("Vertical2")), amplitudeChangePerSecond * Time.deltaTime);
 				if (amplitude <= amplitudeMin) {
@@ -80,13 +91,6 @@ public class Curva1 : MonoBehaviour {
 				}
 			}
 		} else {
-
-			if (Input.GetAxis("Horizontal2") > threshold) {
-				longitude = Mathf.Lerp (longitude, longitudeMinMantener, longitudeChangePerSecond * Time.deltaTime);
-			} else {
-				longitude = Mathf.Lerp (longitude, longitudeMaxMantener, longitudeChangePerSecond * Time.deltaTime);
-			}
-
 			if (Input.GetAxis("Vertical2") > threshold) {
 				amplitude = Mathf.Lerp (amplitude, amplitudeMaxMantener, amplitudeChangePerSecond * Time.deltaTime);
 			} else {

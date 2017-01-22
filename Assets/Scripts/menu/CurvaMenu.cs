@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CurvaMenu : MonoBehaviour {
 
@@ -15,10 +16,19 @@ public class CurvaMenu : MonoBehaviour {
 	public GameObject canvasscore;
 	public GameObject canvascredits;
 
+	public GameObject singlePlayer;
+	public GameObject multiPlayer1;
+	public GameObject multiPlayer2;
+	public GameObject credits;
+	public GameObject scores;
+	public GameObject quit;
+
 	private float posX = 0f;
 	private float posY = 0f;
 	private LineRenderer lineRend = null;
 	private int ind = 0;
+
+
 
 	// Use this for initialization
 	void Start () {
@@ -35,13 +45,14 @@ public class CurvaMenu : MonoBehaviour {
 			lineRend.SetPosition (i, new Vector3 (posX, posY + offsetY, transform.position.z));
 		}
 
+	
+		if (Input.GetKeyDown(KeyCode.D)) {
+				ind += 1;
+		} else if (Input.GetKeyDown(KeyCode.A)) {
+				ind -= 1;
+			}
+			
 
-		if (Input.GetKeyDown (KeyCode.D)) {
-			ind += 1;
-
-		} else if (Input.GetKeyDown (KeyCode.A)) {
-			ind -= 1;
-		}
 
 		while (ind < 0) {
 			ind += persPos.Length;
@@ -60,6 +71,66 @@ public class CurvaMenu : MonoBehaviour {
 			canvascredits.SetActive (true);
 		} else {
 			canvascredits.SetActive (false);
+		}
+		UserControlls ();
+		ChangeMaterials ();
+	}
+	void UserControlls(){
+		if ((ind == 0) && (Input.GetButtonDown("Fire1")))
+			{
+				SceneManager.LoadScene("SinglePlayer");
+			}
+		if ((ind == 1) && (Input.GetButtonDown("Fire1")))
+			{
+				SceneManager.LoadScene("MultiPlayer");
+			}
+		if ((ind == 4) && (Input.GetButtonDown("Fire1")) || (Input.GetKeyDown(KeyCode.Escape)))
+		{
+			Application.Quit();
+		}
+	}
+	void ChangeMaterials()
+	{
+		if (ind == 0) {
+			Renderer rend = singlePlayer.GetComponent<Renderer> ();
+			rend.material.color = Color.white;
+		} else {
+			Renderer rend = singlePlayer.GetComponent<Renderer> ();
+			rend.material.color = Color.grey;
+		}
+
+		if (ind == 1) {
+			Renderer rend = multiPlayer1.GetComponent<Renderer> ();
+			rend.material.color = Color.white;
+			Renderer rend2 = multiPlayer2.GetComponent<Renderer> ();
+			rend2.material.color = Color.white;
+		} else {
+			Renderer rend = multiPlayer1.GetComponent<Renderer> ();
+			rend.material.color = Color.grey;
+			Renderer rend2 = multiPlayer2.GetComponent<Renderer> ();
+			rend2.material.color = Color.grey;
+		}
+
+		if (ind == 2) {
+			Renderer rend = credits.GetComponent<Renderer> ();
+			rend.material.color = Color.yellow;
+		} else {
+			Renderer rend = credits.GetComponent<Renderer> ();
+			rend.material.color = Color.grey;
+		}
+			if (ind == 3) {
+			Renderer rend = scores.GetComponent<Renderer> ();
+				rend.material.color = Color.white;
+			} else {
+			Renderer rend = scores.GetComponent<Renderer> ();
+				rend.material.color = Color.grey;
+			}
+		if (ind == 4) {
+			Renderer rend = quit.GetComponent<Renderer> ();
+			rend.material.color = Color.white;
+		} else {
+			Renderer rend = quit.GetComponent<Renderer> ();
+			rend.material.color = Color.grey;
 		}
 
 	}

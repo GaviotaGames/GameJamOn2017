@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Escenas/Menu.unity
+  - enabled: 1
+    path: Assets/Escenas/SinglePlayer.unity
+  - enabled: 1
+    path: Assets/Escenas/MultiPlayer.unity

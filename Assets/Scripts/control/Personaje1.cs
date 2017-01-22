@@ -15,6 +15,7 @@ public class Personaje1 : MonoBehaviour {
 	private float offset = 7f;
 	private float dodge = 0f;
 	public float dodgeMax = 1.3f;
+	public float offsetVidas = 0f;
 
 
 	void FixedUpdate () {
@@ -35,6 +36,6 @@ public class Personaje1 : MonoBehaviour {
 	private void movement() {
 		dodge = Mathf.Lerp(7f, 7f-dodgeMax, Mathf.Clamp01(Input.GetAxis ("Horizontal2")));
 		posY = (Mathf.Sin (finalSpeed*Time.time + (transform.position.x + offset) * longitude)) * amplitude;
-		transform.position = new Vector3 (dodge, posY, transform.position.z);
+		transform.position = new Vector3 (dodge - offsetVidas, posY, transform.position.z);
 	}
 }

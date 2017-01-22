@@ -68,7 +68,8 @@ MonoBehaviour:
   longitudeMaxMantener: 3
   longitudeMinMantener: 0.2
   speed: 1
-  mantener: 1
+  mantenerX: 1
+  mantenerY: 1
   offset: -7
   balaB: {fileID: 1515728522743876, guid: 3cddc11fe68e48145b19a7abcbc8ab6e, type: 2}
   dodgeMax: 1.3

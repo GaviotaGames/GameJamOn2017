@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ExtraLives : MonoBehaviour {
   public int startingLives = 3;
-  private int extraLives = 3;
+  private int extraLives = 1;
 
   public int takeALife() {
     if (extraLives > 0) {

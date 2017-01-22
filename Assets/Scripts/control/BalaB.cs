@@ -53,7 +53,10 @@ public class BalaB : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other){
 		if ((other.gameObject.tag == "p1") || (other.gameObject.tag == "balaA")) {
-			Destroy (other.gameObject);
+			ExtraLives lives = other.gameObject.GetComponent<ExtraLives>();
+			if (lives != null) {
+				lives.takeALife();
+			}
 			follow.bulletCount -= 1;
 			Destroy (gameObject);
 		}
