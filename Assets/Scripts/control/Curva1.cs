@@ -80,13 +80,14 @@ public class Curva1 : MonoBehaviour {
 				}
 			}
 		} else {
-			if (Input.GetKey (KeyCode.LeftArrow)) {
+
+			if (Input.GetAxis("Horizontal2") > threshold) {
 				longitude = Mathf.Lerp (longitude, longitudeMinMantener, longitudeChangePerSecond * Time.deltaTime);
 			} else {
 				longitude = Mathf.Lerp (longitude, longitudeMaxMantener, longitudeChangePerSecond * Time.deltaTime);
 			}
 
-			if (Input.GetKey (KeyCode.UpArrow)) {
+			if (Input.GetAxis("Vertical2") > threshold) {
 				amplitude = Mathf.Lerp (amplitude, amplitudeMaxMantener, amplitudeChangePerSecond * Time.deltaTime);
 			} else {
 				amplitude = Mathf.Lerp (amplitude, amplitudeMinMantener, amplitudeChangePerSecond * Time.deltaTime);
