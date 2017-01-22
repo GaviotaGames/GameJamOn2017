@@ -48,17 +48,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1929289559996692}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d9daedf4034f334498fb8633249d0a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 88d2bd10321378c42bb3525824cec72b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hazard: {fileID: 1143215125897676, guid: b7dfa3cb9e7f5ca46a308beca2cb78f7, type: 2}
-  spawnValues: {x: 9, y: 0, z: 0}
-  hazardCount: 5
-  spawnWait: 2
-  startWait: 2
+  hazard: {fileID: 0}
+  spawnValues: {x: 0, y: 0, z: 0}
+  hazardCount: 0
+  spawnWait: 0
+  startWait: 0
   waveWait: 0
   aleatoriedad: 0
-  hazardArray:
-  - {fileID: 1143215125897676, guid: b7dfa3cb9e7f5ca46a308beca2cb78f7, type: 2}
-  - {fileID: 1794926249893796, guid: 111e22e85b78d4340872b58868d04e64, type: 2}
+  hazardArray: []
   numSelectors: 5
