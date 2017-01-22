@@ -18,23 +18,13 @@ GameObject:
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-<<<<<<< HEAD:Assets/Prefabs/balaB.prefab
   - component: {fileID: 4669536596147312}
   - component: {fileID: 33759976309853554}
   - component: {fileID: 23485720977599118}
   - component: {fileID: 135537729571965782}
-  - component: {fileID: 114988405077771066}
-  - component: {fileID: 54038838608966292}
-  - component: {fileID: 114845510618611112}
-=======
-  - component: {fileID: 4054169952014718}
-  - component: {fileID: 54153545171888742}
-  - component: {fileID: 136668865316683746}
-  - component: {fileID: 23312603787072044}
-  - component: {fileID: 33678323770443680}
-  - component: {fileID: 114738329360878806}
-  - component: {fileID: 114929184881733322}
->>>>>>> efd74966cbe5e2616be83ac34f10204c1c661e14:Assets/Prefabs/Hazard.prefab
+  - component: {fileID: 54678400412114770}
+  - component: {fileID: 114010028091727794}
+  - component: {fileID: 114951963061695152}
   m_Layer: 0
   m_Name: balaB
   m_TagString: balaB
@@ -49,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1515728522743876}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.7364957, y: -5.23, z: -1.08}
+  m_LocalPosition: {x: 1.8285301, y: -0.02, z: -1.36}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 0}
@@ -68,7 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 9de5350767f249d4491a0e51b4b9625b, type: 2}
+  - {fileID: 2100000, guid: 89214b282c97e834cb02fe2c590a0ce5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93,7 +83,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1515728522743876}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54038838608966292
+--- !u!54 &54678400412114770
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -108,11 +98,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
-<<<<<<< HEAD:Assets/Prefabs/balaB.prefab
---- !u!114 &114845510618611112
-=======
---- !u!114 &114738329360878806
->>>>>>> efd74966cbe5e2616be83ac34f10204c1c661e14:Assets/Prefabs/Hazard.prefab
+--- !u!114 &114010028091727794
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -120,18 +106,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1515728522743876}
   m_Enabled: 1
   m_EditorHideFlags: 0
-<<<<<<< HEAD:Assets/Prefabs/balaB.prefab
   m_Script: {fileID: 11500000, guid: 8adde183509206440a16f4733ad326e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114988405077771066
-=======
-  m_Script: {fileID: 11500000, guid: 8bb8e1efdd8a45c4ab3bb46d716c1f04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
---- !u!114 &114929184881733322
->>>>>>> efd74966cbe5e2616be83ac34f10204c1c661e14:Assets/Prefabs/Hazard.prefab
+--- !u!114 &114951963061695152
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -139,7 +117,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1515728522743876}
   m_Enabled: 1
   m_EditorHideFlags: 0
-<<<<<<< HEAD:Assets/Prefabs/balaB.prefab
   m_Script: {fileID: 11500000, guid: a417e1046783a13499b0688c8f86ae91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -148,13 +125,6 @@ MonoBehaviour:
   bulletSpeedMin: -0.5
 --- !u!135 &135537729571965782
 SphereCollider:
-=======
-  m_Script: {fileID: 11500000, guid: 3a2d8d4dee6d86e43b7afe89e3f04c19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!136 &136668865316683746
-CapsuleCollider:
->>>>>>> efd74966cbe5e2616be83ac34f10204c1c661e14:Assets/Prefabs/Hazard.prefab
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}

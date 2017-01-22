@@ -70,7 +70,7 @@ MonoBehaviour:
   speed: 1
   mantener: 1
   offset: -7
-  balaB: {fileID: 1515728522743876, guid: 1beb29b1ca32d0a46987cd9d7c2e340a, type: 2}
+  balaB: {fileID: 1515728522743876, guid: 3cddc11fe68e48145b19a7abcbc8ab6e, type: 2}
   dodgeMax: 1.3
   bulletCount: 0
   bulletMax: 3
