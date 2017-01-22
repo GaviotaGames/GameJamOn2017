@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1929289559996692}
+  m_IsPrefabParent: 1
+--- !u!1 &1929289559996692
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4747646664221012}
+  - component: {fileID: 114648770800927728}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: GameController
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4747646664221012
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1929289559996692}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 23.01, y: 1.1700001, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114648770800927728
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1929289559996692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88d2bd10321378c42bb3525824cec72b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hazard: {fileID: 0}
+  spawnValues: {x: 0, y: 0, z: 0}
+  hazardCount: 5
+  spawnWait: 0
+  startWait: 0
+  waveWait: 5
+  aleatoriedad: 0
+  hazardArray:
+  - {fileID: 1090057604530798, guid: 1f8be6f1de7d2924483b14276f8da2d2, type: 2}
+  - {fileID: 1405606556943614, guid: a0670c2c1bab3014cabe237d4aa367a5, type: 2}
+  - {fileID: 1928724467764064, guid: 610fae52f0e93ee4ca302a1983374240, type: 2}
+  - {fileID: 1104884682389424, guid: 64a90300ddf88104da1b34c1057ab952, type: 2}
+  - {fileID: 1695580271673594, guid: 7b66a06d384ca5743abc08b80abb16cc, type: 2}
+  - {fileID: 1959585197520180, guid: adbe5b698e94e1747ba0e269c1a17f5b, type: 2}
+  - {fileID: 1810088702844844, guid: 93550d7da6c87f4448862f7dc4a501a6, type: 2}
+  - {fileID: 1637687109051330, guid: 5c4220dc99d0eac4e87f2402db67d2fc, type: 2}
+  numSelectors: 5

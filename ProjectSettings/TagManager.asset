@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Boundary
+  - curvaA
+  - curvaB
+  - balaA
+  - balaB
+  - p1
+  - p2
   layers:
   - Default
   - TransparentFX
