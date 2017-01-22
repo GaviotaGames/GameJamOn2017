@@ -23,8 +23,7 @@ public class LevelPalettes : MonoBehaviour {
   void Start() {
     if (Instance != null && Instance != this) {
       Destroy(gameObject);
-    }
-    else {
+    } else {
       Instance = this;
       DontDestroyOnLoad(gameObject);
       paletteSwap();

@@ -46,7 +46,7 @@ Material:
       second: {r: 0.5514706, g: 0.9814401, b: 1, a: 1}
     - first:
         name: _colorDown
-      second: {r: 0.23511444, g: 0.35607973, b: 0.54608095, a: 0}
+      second: {r: 0.33441645, g: 0.24103592, b: 0.36955586, a: 0}
     - first:
         name: _colorUp
-      second: {r: 0.6477848, g: 0.214121, b: 0.214121, a: 0}
+      second: {r: 0.6684632, g: 0.3243854, b: 0.3243854, a: 0}

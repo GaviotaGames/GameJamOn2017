@@ -15,6 +15,15 @@ public class ExtraLives : MonoBehaviour {
     return extraLives;
   }
 
+  public void Update () {
+    for (int i = 0; i < transform.childCount; i++) {
+      transform.GetChild(i).GetComponent<MeshRenderer>().enabled = false;
+    }
+    for (int i = 0; i < (extraLives - 1); i++) {
+      transform.GetChild(i).GetComponent<MeshRenderer>().enabled = GetComponent<MeshRenderer>().enabled;
+    }
+  }
+
   public int getExtraLives() {
     return extraLives;
   }
