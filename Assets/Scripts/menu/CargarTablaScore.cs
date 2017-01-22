@@ -17,17 +17,17 @@ public class CargarTablaScore : MonoBehaviour {
 				PlayerPrefs.SetString("Name"+2, "ASS");
 				PlayerPrefs.SetFloat("Score"+3, 250.125f);
 				PlayerPrefs.SetString("Name"+3, "SIR");
-				PlayerPrefs.SetFloat("Score"+4, 100.950f);
+				PlayerPrefs.SetFloat("Score"+4, 50.950f);
 				PlayerPrefs.SetString("Name"+4, "ALF");
-				PlayerPrefs.SetFloat("Score"+5, 75.000f);
+				PlayerPrefs.SetFloat("Score"+5, 20.000f);
 				PlayerPrefs.SetString("Name"+5, "1AI");
-				PlayerPrefs.SetFloat("Score"+6, 50);
+				PlayerPrefs.SetFloat("Score"+6, 0);
 				PlayerPrefs.SetString("Name"+6, "Alf");
-				PlayerPrefs.SetFloat("Score"+7, 40);
+				PlayerPrefs.SetFloat("Score"+7, 0);
 				PlayerPrefs.SetString("Name"+7, "Luigi");
-				PlayerPrefs.SetFloat("Score"+8, 30);
+				PlayerPrefs.SetFloat("Score"+8, 0);
 				PlayerPrefs.SetString("Name"+8, "Mario");
-				PlayerPrefs.SetFloat("Score"+9, 1);
+				PlayerPrefs.SetFloat("Score"+9, 0);
 				PlayerPrefs.SetString("Name"+9, "Unai");
 			}
 			scores.Add ( new PlayerScore(PlayerPrefs.GetString ("Name" + i),PlayerPrefs.GetFloat("Score"+i)));

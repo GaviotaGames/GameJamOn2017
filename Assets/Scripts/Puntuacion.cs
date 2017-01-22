@@ -21,8 +21,8 @@ public class Puntuacion : MonoBehaviour {
 		printScore = ScorePersistente.Instance.getPlayerScore ();
 		datehoy = System.DateTime.Now.ToString("HH:mm:ss");
 	}
-	void OnGUI() {
+	/*void OnGUI() {
 		GUI.Label(new Rect(10, 10, 100, 20), printScore.ToString());
 		GUI.Label(new Rect(10, 30, 100, 20), datehoy);
-	}
+	}*/
 }
