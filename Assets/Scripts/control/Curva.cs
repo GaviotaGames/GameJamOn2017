@@ -27,6 +27,7 @@ public class Curva : MonoBehaviour {
 	public float dodgeMax = 1.3f;
 	public int bulletCount = 0;
 	public int bulletMax = 3;
+	public float offsetY = 0;
 
 	private float posX = 0f;
 	private float posY = 0f;
@@ -47,7 +48,7 @@ public class Curva : MonoBehaviour {
 		for (int i = 0; i < lineRend.numPositions; i++) {
 			posX = transform.position.x + separacion * i;
 			posY = (Mathf.Sin(finalSpeed*Time.time + (posX + offset) * longitude)) * amplitude;
-			lineRend.SetPosition (i, new Vector3 (posX, posY, transform.position.z));
+			lineRend.SetPosition (i, new Vector3 (posX, posY-offsetY, transform.position.z));
 		}
 	}
 

@@ -13,7 +13,7 @@ public class EjemploUsoGuardarScore : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetKeyUp(KeyCode.G)){
-			listscore.guardarScore ("Yisus", 60f);
+			listscore.guardarScore ("Yisus",ScorePersistente.Instance.getPlayerScore ());
 		}
 	}
 

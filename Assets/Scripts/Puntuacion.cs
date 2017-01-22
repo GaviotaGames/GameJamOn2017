@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Puntuacion : MonoBehaviour {
-	private float printScore;
+	public float printScore = 0;
 	private string datehoy;
 	private int variableStart = 0;
 	// Use this for initialization
