@@ -12,6 +12,8 @@ public class CurvaMenu : MonoBehaviour {
 	public float offsetY = 0f;
 	public float[] persPos;
 	public float persX;
+	public GameObject canvasscore;
+	public GameObject canvascredits;
 
 	private float posX = 0f;
 	private float posY = 0f;
@@ -47,5 +49,18 @@ public class CurvaMenu : MonoBehaviour {
 
 		ind = ind % persPos.Length;
 		persX = persPos[ind];
+
+		if (ind == 3) {
+			canvasscore.SetActive (true);
+		} else {
+			canvasscore.SetActive (false);
+		}
+
+		if (ind == 2) {
+			canvascredits.SetActive (true);
+		} else {
+			canvascredits.SetActive (false);
+		}
+
 	}
 }
