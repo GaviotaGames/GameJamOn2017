@@ -6,6 +6,10 @@ public class DestroyByBoundaries : MonoBehaviour
 {
 	void OnTriggerExit(Collider other)
 	{
-		Destroy(other.gameObject);
+    ExtraLives collided = other.GetComponent<ExtraLives>();
+
+    if (collided != null) {
+      collided.takeALife();
+    }
 	}
 }

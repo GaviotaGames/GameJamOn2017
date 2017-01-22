@@ -23,8 +23,7 @@ public class LevelPalettes : MonoBehaviour {
   void Start() {
     if (Instance != null && Instance != this) {
       Destroy(gameObject);
-    }
-    else {
+    } else {
       Instance = this;
       DontDestroyOnLoad(gameObject);
       paletteSwap();
@@ -45,7 +44,7 @@ public class LevelPalettes : MonoBehaviour {
 
   public Palette[] getCurrentPalettes() {
     int nowHour = System.DateTime.Now.Hour;
-    if (System.DateTime.Now.Hour <= 6 || System.DateTime.Now.Hour >= 21) {
+    if (Universal.isNightTime()) {
       return nightPalettes;
     }
     return dayPalettes;
@@ -53,7 +52,7 @@ public class LevelPalettes : MonoBehaviour {
 
   public Palette[] getCurrentBossPalettes() {
     int nowHour = System.DateTime.Now.Hour;
-    if (System.DateTime.Now.Hour <= 6 || System.DateTime.Now.Hour >= 21) {
+    if (Universal.isNightTime()) {
       return bossNightPalettes;
     }
     return bossDayPalettes;

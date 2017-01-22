@@ -15,7 +15,6 @@ public class Personaje : MonoBehaviour {
 	private float dodge = 0f;
 	public float dodgeMax = 1.3f;
 
-
 	void FixedUpdate () {
 		if (follow != null) {
 			this.amplitude = follow.amplitude;
@@ -31,7 +30,6 @@ public class Personaje : MonoBehaviour {
 	}
 
 	private void movement() {
-
 		dodge = Mathf.Lerp(0f, dodgeMax, Input.GetAxis ("Horizontal"));
 		posY = (Mathf.Sin (finalSpeed*Time.time + (transform.position.x) * longitude)) * amplitude;
 		transform.position = new Vector3 (dodge, posY, transform.position.z);

@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour
 	int avance = 6;
 	float posX = 0;
 
+
 	void Start ()
 	{
 		posX = spawnValues.x;
