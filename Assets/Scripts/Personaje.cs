@@ -12,7 +12,6 @@ public class Personaje : MonoBehaviour {
 	private float finalSpeed = 2f;
 	private float posY = 0f;
 
-
 	void FixedUpdate () {
 		if (follow != null) {
 			this.amplitude = follow.amplitude;
@@ -26,7 +25,7 @@ public class Personaje : MonoBehaviour {
 	}
 
 	private void movement() {
-		posY = (Mathf.Sin (finalSpeed*Time.time + transform.position.x * longitude)) * amplitude;
+		posY = (Mathf.Sin (finalSpeed * Time.time + transform.position.x * longitude)) * amplitude;
 		transform.position = new Vector3 (transform.position.x, posY, transform.position.z);
 	}
 }
