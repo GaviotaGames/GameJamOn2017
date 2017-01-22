@@ -22,7 +22,7 @@ public class Puntuacion : MonoBehaviour {
 		datehoy = System.DateTime.Now.ToString("HH:mm:ss");
 	}
 	void OnGUI() {
-		GUI.Label(new Rect(10, 10, 100, 20), Mathf.FloorToInt(printScore).ToString());
+		GUI.Label(new Rect(10, 10, 100, 20), printScore.ToString());
 		GUI.Label(new Rect(10, 30, 100, 20), datehoy);
 	}
 }
