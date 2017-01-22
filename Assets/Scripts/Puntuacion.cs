@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Puntuacion : MonoBehaviour {
-	private float printScore;
+	public float printScore = 0;
 	private string datehoy;
 	private int variableStart = 0;
 	// Use this for initialization
@@ -21,8 +21,8 @@ public class Puntuacion : MonoBehaviour {
 		printScore = ScorePersistente.Instance.getPlayerScore ();
 		datehoy = System.DateTime.Now.ToString("HH:mm:ss");
 	}
-	/*void OnGUI() {
+	void OnGUI() {
 		GUI.Label(new Rect(10, 10, 100, 20), printScore.ToString());
 		GUI.Label(new Rect(10, 30, 100, 20), datehoy);
-	}*/
+	}
 }
