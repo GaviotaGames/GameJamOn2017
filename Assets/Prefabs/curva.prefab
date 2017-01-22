@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4585675711335140}
   - component: {fileID: 120978015605199516}
   - component: {fileID: 114476598104776270}
+  - component: {fileID: 114439542125314148}
   m_Layer: 0
   m_Name: curva
-  m_TagString: Untagged
+  m_TagString: curvaA
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34,13 +35,24 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1694343682798480}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114439542125314148
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1694343682798480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8788b10a425c8e24ebffdec1c6e74b48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114476598104776270
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -62,8 +74,17 @@ MonoBehaviour:
   amplitudeMin: -2
   longitudeMax: 5
   longitudeMin: 0.2
-  speed: 2
-  finalSpeed: 2
+  amplitudeMaxMantener: 2
+  amplitudeMinMantener: 0.2
+  longitudeMaxMantener: 3
+  longitudeMinMantener: 0.2
+  speed: 1
+  mantener: 1
+  offset: 0
+  balaA: {fileID: 1515728522743876, guid: 2ca98f5e8d8ee8541960c3eb341b9376, type: 2}
+  dodgeMax: 1.3
+  bulletCount: 0
+  bulletMax: 3
 --- !u!120 &120978015605199516
 LineRenderer:
   m_ObjectHideFlags: 1

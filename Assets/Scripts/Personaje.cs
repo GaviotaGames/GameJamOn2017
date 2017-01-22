@@ -9,23 +9,29 @@ public class Personaje : MonoBehaviour {
     
 	private float amplitude = 1f;
 	private float longitude = 1f;
-	private float finalSpeed = 2f;
+	private float speed = 1f;
+	private float finalSpeed = 1f;
 	private float posY = 0f;
+	private float dodge = 0f;
+	public float dodgeMax = 1.3f;
 
 	void FixedUpdate () {
 		if (follow != null) {
 			this.amplitude = follow.amplitude;
 			this.longitude = follow.longitude;
-			this.finalSpeed = follow.finalSpeed;
+			this.speed = follow.speed;
 		}
 	}
 
 	void Update () {
 		movement();
+
+		finalSpeed = speed;
 	}
 
 	private void movement() {
-		posY = (Mathf.Sin (finalSpeed * Time.time + transform.position.x * longitude)) * amplitude;
-		transform.position = new Vector3 (transform.position.x, posY, transform.position.z);
+		dodge = Mathf.Lerp(0f, dodgeMax, Input.GetAxis ("Horizontal"));
+		posY = (Mathf.Sin (finalSpeed*Time.time + (transform.position.x) * longitude)) * amplitude;
+		transform.position = new Vector3 (dodge, posY, transform.position.z);
 	}
 }
