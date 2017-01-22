@@ -17,7 +17,6 @@ public class CurvaMenu : MonoBehaviour {
 	private float posY = 0f;
 	private LineRenderer lineRend = null;
 	private int ind = 0;
-	private bool activo = false;
 
 	// Use this for initialization
 	void Start () {
