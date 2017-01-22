@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4585675711335140}
   - component: {fileID: 120978015605199516}
   - component: {fileID: 114476598104776270}
-  - component: {fileID: 114439542125314148}
+  - component: {fileID: 114214558238617742}
   m_Layer: 0
   m_Name: curva
   m_TagString: curvaA
@@ -42,7 +42,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114439542125314148
+--- !u!114 &114214558238617742
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -50,7 +50,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1694343682798480}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8788b10a425c8e24ebffdec1c6e74b48, type: 3}
+  m_Script: {fileID: 11500000, guid: 84725edc31ee2b34a9b56bb8e39bc617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114476598104776270
